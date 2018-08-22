@@ -2,6 +2,7 @@
 @import "_reset.scss";
 
 .container {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: linear-gradient(315deg, #3483b0, #4846b9, #923ec1, #a53683, #aa3a3a, #b27125, #2c9630);
@@ -52,10 +53,20 @@
     text-shadow: 5px 5px rgba(0,0,0,0.1);
   }
 }
-#bgAnimation {
+#canvas1 {
   position: absolute;
   width: 100%;
   height: 100vh;
+  top: 0;
+  left: 0;
+  display: block;
+}
+#canvas2 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
   display: block;
 }
 
@@ -81,5 +92,17 @@
     &:hover {
       color: rgba(255,255,255,1);
     }
+  }
+}
+.btn.background-article {
+  font-family: 'PT Mono', monospace;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 1.5rem;
+  &:hover {
+    color: rgba(255,255,255,1);
   }
 }
