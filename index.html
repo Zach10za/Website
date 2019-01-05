@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Zach Loza - Web Developer">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zach Loza - Web Developer">
 
-        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
-        <title>Zach Loza</title>
-        <link rel="stylesheet" href="assets/style.css">
-        <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-        
-    </head>
-    <body>
-        <div class="container">
+  <title>Zach Loza</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+    crossorigin="anonymous"></script>
 
-            <canvas id="canvas" width="600" height="300"></canvas>
+</head>
 
-            <div class="page-title">
-                <h1>Zach<br/>Loza</h1>
-            </div>
-            <div class="btn-container">
-                <a target="_blank" href="https://github.com/Zach10za" class="btn" title="GitHub"><i class="fab fa-github"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/zach-loza/" class="btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a target="_blank" href="/assets/Zach-Loza_Resume.pdf" class="btn" title="Resume"><i class="fas fa-file-alt"></i></a>
-                <a href="mailto:Zach.Loza@gmail.com" class="btn" title="Zach.Loza@gmail.com"><i class="fas fa-at"></i></a>
-                <a href="tel:9258904824" class="btn phone" title="925&middot;890&middot;4824">925&middot;890&middot;4824</a>
-            </div>
-            <a href="https://github.com/Zach10za/Website" target="_blank" class="btn background-article">How does the background work?</a>
-        </div>
-        
-        <script type="text/javascript" src="/assets/js/index.js"></script>
-    </body>
+<body>
+  <div class="container">
+
+    <canvas id="canvas" width="600" height="300"></canvas>
+
+    <div class="page-title">
+      <h1>Zach<br />Loza</h1>
+    </div>
+    <div id="settings-button">
+      <i class="fas fa-cog"></i>
+    </div>
+    <div id="settings" class="settings">
+      <label>
+        Distance
+        <input type="range" min="0" max="240" value="120" id="slider-distance" />
+      </label>
+      <label>
+        Speed
+        <input type="range" min="0" max="2" value="1" id="slider-speed" step="0.1" />
+      </label>
+      <label>
+        Min Radius
+        <input type="range" min="0" max="2" value="1" id="slider-minRadius" step="0.1" />
+      </label>
+      <label>
+        Max Radius
+        <input type="range" min="5" max="15" value="10" id="slider-maxRadius" step="0.1" />
+      </label>
+    </div>
+
+    <div class="btn-container">
+      <a target="_blank" href="https://github.com/Zach10za" class="btn" title="GitHub"><i class="fab fa-github"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/zach-loza/" class="btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://zachloza.com/Zach-Loza_Resume.pdf" class="btn" title="Resume"><i class="fas fa-file-alt"></i></a>
+      <a href="mailto:Zach.Loza@gmail.com" class="btn" title="Zach.Loza@gmail.com"><i class="fas fa-at"></i></a>
+      <a href="tel:9258904824" class="btn phone" title="925&middot;890&middot;4824">925&middot;890&middot;4824</a>
+    </div>
+    <a href="https://github.com/Zach10za/Website" target="_blank" class="btn background-article">How does the
+      background work?</a>
+  </div>
+
+  <script type="text/javascript" src="/assets/js/index.js"></script>
+</body>
+
 </html>

@@ -1,4 +1,3 @@
-
 @import "_reset.scss";
 
 .container {
@@ -7,7 +6,6 @@
   height: 100vh;
   background: linear-gradient(315deg, #3483b0, #4846b9, #923ec1, #a53683, #aa3a3a, #b27125, #2c9630);
   background-size: 1400% 1400%;
-  
   -webkit-animation: bgColor 120s ease infinite;
   -moz-animation: bgColor 120s ease infinite;
   animation: bgColor 120s ease infinite;
@@ -105,4 +103,89 @@
   &:hover {
     color: rgba(255,255,255,1);
   }
+}
+
+#settings-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5rem;
+  z-index: 99;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: rgba(255,255,255,1);
+  }
+}
+
+.settings {
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  padding: 0;
+  background: rgba(0,0,0,0.2);
+  border-radius: 5px;
+  font-family: 'PT Mono', monospace;
+  transition: 0.4s;
+  overflow: hidden;
+  &.show {
+    height: 220px;
+    width: 170px;
+    padding: 20px;
+    -webkit-animation: settingsOpen 1s ease normal;
+    -moz-animation: settingsOpen 1s ease normal;
+    animation: settingsOpen 1s ease normal;
+  }
+  label {
+    color: rgba(255,255,255,0.8);
+    &:last-of-type input[type=range] {
+      margin-bottom: 0;
+    }
+  }
+  input[type=range] {
+    display: block;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    border-radius: 15px;
+    opacity: 0.5;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 15px;
+      background: rgba(240,240,240,1);
+      cursor: pointer;
+      margin-top: -4px;
+      transition: 0.3s;
+      box-shadow: 1px 1px 0 1px rgba(0,0,0,0.3);
+    }
+    &::-webkit-slider-runnable-track {
+      background: rgba(200,200,200,1);
+      height: 6px;
+      border-radius: 15px;
+      box-shadow: 1px 1px 0 1px rgba(0,0,0,0.2);
+    }
+    &:hover {
+      opacity: 0.8;
+      &::-webkit-slider-thumb {
+        background: rgb(0, 110, 255);
+      }
+    }
+    &:focus {
+      opacity: 1;
+      outline: none;
+    }
+  }
+}
+
+@keyframes settingsOpen { 
+  0%{height: 0; width: 0; padding: 0;}
+  40%{height: 0; width: 170px; padding: 10px 20px 0 20px;}
+  100%{height: 220px; width: 170px; padding: 20px;}
 }
